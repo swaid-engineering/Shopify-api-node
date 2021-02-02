@@ -82,7 +82,7 @@ function registerAll(Shopify) {
       configurable: true,
       get: function get() {
         const resource = require(`./${map[prop]}`);
-
+        console.log(resource, 'resource');
         return Object.defineProperty(this, prop, {
           value: new resource(this)
         })[prop];
