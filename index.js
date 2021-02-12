@@ -125,10 +125,15 @@ Shopify.prototype.request = function request(uri, method, key, data, headers) {
     retry: 0,
     method
   };
+  
+  console.log("options", options)
 
   if (data) {
     options.json = key ? { [key]: data } : data;
   }
+  console.log("data", data)
+  console.log("options.json", options.json)
+    console.log("key", key)
 
   return got(uri, options).then(
     (res) => {
