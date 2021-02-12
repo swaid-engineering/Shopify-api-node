@@ -31,6 +31,9 @@ const base = {
    */
   create(params) {
     const url = this.buildUrl();
+    console.log("base.js")
+    console.log("this.key", this.key)
+    console.log("params", params)
     return this.shopify.request(url, 'POST', this.key, params);
   },
 
